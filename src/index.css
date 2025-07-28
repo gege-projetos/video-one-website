@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --video-one-purple: #6B46C1;
+  --video-one-blue: #3B82F6;
+  --video-one-green: #10B981;
+  --video-one-pink: #EC4899;
+  --video-one-orange: #F59E0B;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6B46C1, #3B82F6, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card {
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.1), rgba(59, 130, 246, 0.1));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.2), rgba(59, 130, 246, 0.2));
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.package-card-dark {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(236, 72, 153, 0.1));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.package-card-dark:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(236, 72, 153, 0.2));
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 20px rgba(107, 70, 193, 0.5); }
+  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+}
+
+.package-card-light {
+    @apply bg-white text-slate-800 rounded-2xl p-8 relative transition-all duration-300 ease-in-out;
+}
+
+.package-card-light:hover {
+    @apply transform -translate-y-2 shadow-2xl;
+}
