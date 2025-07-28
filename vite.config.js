@@ -20,8 +20,7 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					vendor: ['react', 'react-dom'],
-					ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast']
+					vendor: ['react', 'react-dom']
 				}
 			}
 		}
